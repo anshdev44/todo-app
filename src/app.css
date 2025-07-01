@@ -129,7 +129,7 @@ body {
   border-radius: 20px;
   align-items: center;
   margin-left: 5px;
- 
+
   padding: 5px;
 }
 
@@ -137,12 +137,27 @@ body {
   cursor: pointer;
 }
 
-.todo1 svg:hover{
+.todo1 svg:hover {
   transform: scale(1.5);
   transition: transform 0.3s ease;
 }
 
-.contains{
+.contains {
   display: flex;
   gap: 10px;
 }
+
+.completed_tasks {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 10px;
+
+}
+
+.completed_tasks svg {
+  cursor: pointer;
+  margin-left: 5px;
+
+}
+
