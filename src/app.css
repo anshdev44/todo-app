@@ -141,3 +141,8 @@ body {
   transform: scale(1.5);
   transition: transform 0.3s ease;
 }
+
+.contains{
+  display: flex;
+  gap: 10px;
+}
