@@ -9,21 +9,25 @@ export function App() {
       alert("add something");
       return;
     } else {
-      const container = document.querySelector('.todos');
-      const todoDiv = document.createElement('div');
-      todoDiv.className = 'todo1';
+      document.querySelector('.todos').insertAdjacentHTML('beforeend', `
+  <div class="todo1">
+    <div class="todo1_desc">
+      <p>${input}</p>
+    </div>
+    <div class="delete_todo">
+      <svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="6" width="14" height="14" fill="#FF3B3B" rx="1" ry="1" />
+        <rect x="7" y="8" width="2" height="10" fill="black" />
+        <rect x="11" y="8" width="2" height="10" fill="black" />
+        <rect x="15" y="8" width="2" height="10" fill="black" />
+        <rect x="9" y="2" width="6" height="2" fill="#FF3B3B" />
+        <rect x="8" y="4" width="8" height="2" fill="#FF3B3B" />
+      </svg>
+    </div>
+  </div>
+`);
 
-      const descDiv = document.createElement('div');
-      descDiv.className = 'todo_description';
-
-      const p = document.createElement('p');
-      p.textContent = input;
-
-      descDiv.appendChild(p);
-      todoDiv.appendChild(descDiv);
-      container.appendChild(todoDiv);
-
-      setinput(""); 
+      setinput("");
     }
   }
 
@@ -66,8 +70,10 @@ export function App() {
           </div>
         </div>
 
-        {/* ✅ Add the todos container */}
-        <div className="todos"></div>
+        
+        <div className="todos">
+         {/* ✅ Add the todos container */}
+        </div>
       </div>
     </>
   )
