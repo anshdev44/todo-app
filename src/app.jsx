@@ -3,14 +3,14 @@ import './app.css';
 
 export function App() {
   const [input, setinput] = useState('');
-  const [check, setCheck] = useState(true); // toggle view
+  const [check, setCheck] = useState(true); 
   const [todos, setTodos] = useState([]);
 
   function completed() {
     setCheck(!check);
   }
 
-  function done(index) {
+  function done(index) { 
     const updated = todos.map((todo, i) =>
       i === index ? { ...todo, completed: !todo.completed } : todo
     );
